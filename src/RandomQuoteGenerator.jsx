@@ -36,9 +36,9 @@ export default function RandomQuoteGenerator() {
           <p className="text-xl text-balance mb-4">
             {quote
               ? `"${quote}"`
-              : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque mollitia asperiores optio possimus voluptatum rerum ipsa distinctio! Harum dicta voluptatibus deserunt adipisci numquam ex ipsum!"}
+              : "..."}
           </p>
-          <p className=" text-end text-xl">— {author ? author : "Anonymous"}</p>
+          <p className=" text-end text-xl">— {author ? author : "..."}</p>
         </div>
       </div>
 
