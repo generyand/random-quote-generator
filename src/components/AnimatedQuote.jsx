@@ -4,10 +4,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function AnimatedQuote({ quote }) {
-  const [quoteChars, setQuoteChars] = useState([]);
+  let quoteChars = [];
+  // const [quoteChars, setQuoteChars] = useState([]);
 
   useMemo(() => {
-    setQuoteChars(regexSplitString(quote));
+    quoteChars = regexSplitString(quote);
+    quoteChars.push('"');
+    quoteChars.unshift('"');
   }, [quote]);
 
   // quoteChars.push('"');
