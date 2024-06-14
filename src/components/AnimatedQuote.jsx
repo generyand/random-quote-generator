@@ -1,11 +1,19 @@
 import React from "react";
 import regexSplitString from "../utils/regexSplitString";
 import { AnimatePresence, motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function AnimatedQuote({ quote }) {
-  const quoteChars = regexSplitString(quote);
-  quoteChars.push('"');
-  quoteChars.unshift('"');
+  const [quoteChars, setQuoteChars] = useState([]);
+
+  useEffect(() => {
+    setQuoteChars(regexSplitString(quote));
+  }, [quote]);
+
+  // quoteChars.push('"');
+  // quoteChars.unshift('"');
+  alert(quoteChars.join(""));
+
   return (
     <>
       <AnimatePresence>

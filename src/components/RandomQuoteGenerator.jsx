@@ -21,32 +21,36 @@ export default function RandomQuoteGenerator() {
       });
   };
 
-  useEffect(() => {
-    getQuote();
-  }, []);
+  // useEffect(() => {
+  //   getQuote();
+  // }, []);
+
   return (
     <div className="text-white mt-[15vh] max-w-2xl flex flex-col items-center mx-4">
-      <motion.h1 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 , delay: 0.1}}
-      className="text-2xl font-bold text-center text-transparent lg:text-4xl bg-gradient-to-r to-pink-600 from-orange-800 bg-clip-text ">
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="text-2xl font-bold text-center text-transparent lg:text-4xl bg-gradient-to-r to-pink-600 from-orange-800 bg-clip-text "
+      >
         Random Famous Quotes
       </motion.h1>
-      <motion.p 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 , delay: 0.2}}
-      className="mb-8 text-center text-transparent bg-gradient-to-r to-pink-600 from-orange-800 bg-clip-text ">
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mb-8 text-center text-transparent bg-gradient-to-r to-pink-600 from-orange-800 bg-clip-text "
+      >
         Discover random wisdom from various authors and genres. Enjoy a new
         perspective with each quote!
       </motion.p>
 
-      <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 , delay: 0.3}}
-      className="card | mb-12 p-8 shadow-xl rounded-md min-w-full">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="card | mb-12 p-8 shadow-xl rounded-md min-w-full"
+      >
         <div className="text">
           {/* Quote */}
           <p className="mb-4 text-xl">
