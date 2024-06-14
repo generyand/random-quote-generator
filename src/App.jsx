@@ -1,12 +1,12 @@
-import RandomQuoteGenerator from "./RandomQuoteGenerator";
+import RandomQuoteGenerator from "./components/RandomQuoteGenerator";
 import backgroundImage from "./assets/background.jpg";
 
 function App() {
   return (
     <div
-      className="mx-auto flex justify-center bg-no-repeat bg-cover h-full bg-center"
+      className="flex justify-center h-full mx-auto bg-center bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${backgroundImage})` }}
-      id="root"
+      id="quote-generator"
     >
       <RandomQuoteGenerator />
     </div>
