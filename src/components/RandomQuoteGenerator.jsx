@@ -45,6 +45,7 @@ export default function RandomQuoteGenerator() {
       <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 , delay: 0.3}}
       className="card | mb-12 p-8 shadow-xl rounded-md min-w-full">
         <div className="text">
           {/* Quote */}
