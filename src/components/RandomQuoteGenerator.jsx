@@ -1,5 +1,5 @@
 import axios from "axios";
-import React from "react";
+import React, { useMemo } from "react";
 import { useState, useEffect } from "react";
 import regexSplitString from "../utils/regexSplitString";
 import { AnimatePresence, motion } from "framer-motion";
@@ -21,9 +21,10 @@ export default function RandomQuoteGenerator() {
       });
   };
 
-  // useEffect(() => {
-  //   getQuote();
-  // }, []);
+  useMemo(() => {
+    getQuote();
+  }, []);
+
 
   return (
     <div className="text-white mt-[15vh] max-w-2xl flex flex-col items-center mx-4">

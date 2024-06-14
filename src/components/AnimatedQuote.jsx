@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import regexSplitString from "../utils/regexSplitString";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -6,13 +6,15 @@ import { useState, useEffect } from "react";
 export default function AnimatedQuote({ quote }) {
   const [quoteChars, setQuoteChars] = useState([]);
 
-  useEffect(() => {
+  useMemo(() => {
     setQuoteChars(regexSplitString(quote));
   }, [quote]);
 
   // quoteChars.push('"');
   // quoteChars.unshift('"');
-  alert(quoteChars.join(""));
+  // alert(quoteChars.join(""));
+
+  // console.log(quoteChars);
 
   return (
     <>
