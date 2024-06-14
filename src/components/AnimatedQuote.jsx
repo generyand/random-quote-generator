@@ -6,7 +6,6 @@ export default function AnimatedQuote({ quote }) {
   const quoteChars = regexSplitString(quote);
   quoteChars.push('"');
   quoteChars.unshift('"');
-  console.log(quoteChars);
   return (
     <>
       <AnimatePresence>
