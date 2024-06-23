@@ -15,8 +15,6 @@ function Quote() {
     prevCharDelay = authDisplayDelay;
   }
 
-  // alert(authDisplayDelay);
-
   const getQuote = useCallback(() => {
     setQuote("");
     setAuthor("");
@@ -35,8 +33,6 @@ function Quote() {
   useEffect(() => {
     getQuote();
   }, []);
-
-  console.log(quote);
 
   return (
     <div className="flex flex-col w-full text-white min-h-[360px]  justify-between sm:min-h-[300px]">

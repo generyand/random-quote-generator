@@ -8,7 +8,6 @@ export default function AnimatedQuote({ quote }) {
   quoteChars.unshift('"');
   quoteChars.push('"');
 
-  console.log("AnimatedQuote Rendered!");
 
   return (
     <>

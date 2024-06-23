@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 function Header() {
-  console.log("Header Rendered!");
 
   return (
     <div >

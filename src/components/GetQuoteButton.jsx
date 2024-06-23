@@ -1,7 +1,6 @@
 import React from "react";
 
 function GetQuoteButton({ getQuote }) {
-  console.log("GetQuoteButton Rendered!");
 
   return (
     <button
