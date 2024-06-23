@@ -4,7 +4,7 @@ function Header() {
   console.log("Header Rendered!");
 
   return (
-    <>
+    <div >
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -22,7 +22,7 @@ function Header() {
         Discover random wisdom from various authors and genres. Enjoy a new
         perspective with each quote!
       </motion.p>
-    </>
+    </div>
   );
 }
 

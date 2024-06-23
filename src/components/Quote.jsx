@@ -27,7 +27,7 @@ function Quote() {
   console.log(quote);
 
   return (
-    <>
+    <div className="flex flex-col w-full text-white">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -45,7 +45,7 @@ function Quote() {
         </div>
       </motion.div>
       <GetQuoteButton getQuote={getQuote} />
-    </>
+    </div>
   );
 }
 
