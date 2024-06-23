@@ -1,38 +1,27 @@
-import React, { useMemo } from "react";
 import regexSplitString from "../utils/regexSplitString";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function AnimatedQuote({ quote }) {
   let quoteChars = [];
-  // const [quoteChars, setQuoteChars] = useState([]);
 
-  useMemo(() => {
-    quoteChars = regexSplitString(quote);
-    quoteChars.push('"');
-    quoteChars.unshift('"');
-  }, [quote]);
+  quoteChars = regexSplitString(quote);
+  quoteChars.unshift('"');
+  quoteChars.push('"');
 
-  // quoteChars.push('"');
-  // quoteChars.unshift('"');
-  // alert(quoteChars.join(""));
-
-  // console.log(quoteChars);
+  console.log("AnimatedQuote Rendered!");
 
   return (
     <>
-      <AnimatePresence>
-        {quoteChars.map((char, index) => (
-          <motion.span
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.25, delay: index * 0.01 }}
-          >
-            {char}
-          </motion.span>
-        ))}
-      </AnimatePresence>
+      {quoteChars.map((char, index) => (
+        <motion.span
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.25, delay: index * 0.02 }}
+        >
+          {char}
+        </motion.span>
+      ))}
     </>
   );
 }
