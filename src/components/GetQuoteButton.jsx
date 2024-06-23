@@ -5,7 +5,7 @@ function GetQuoteButton({ getQuote }) {
 
   return (
     <button
-      className="px-4 py-2 font-semibold bg-orange-500 rounded-md shadow-xl active:bg-orange-300 hover:bg-orange-400"
+      className="px-4 py-2 font-semibold text-white transition rounded-md shadow-xl bg-gradient-to-l from-orange-500 to-pink-600 active:scale-105"
       onClick={getQuote}
     >
       Get Quote
