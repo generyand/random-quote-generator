@@ -1,5 +1,5 @@
 import RandomQuoteGenerator from "./components/RandomQuoteGenerator";
-import backgroundImage from "./assets/background.jpg";
+import backgroundImage from "./assets/background.webp";
 
 function App() {
   return (

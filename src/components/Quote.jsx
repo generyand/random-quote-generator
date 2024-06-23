@@ -7,13 +7,14 @@ import GetQuoteButton from "./GetQuoteButton";
 function Quote() {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
+
   let authDisplayDelay = 0;
   let prevCharDelay = 0;
-
-  for (let i = 0; i <= quote.length + 5; i++) {
+  for (let i = 0; i <= quote.length; i++) {
     authDisplayDelay += i * 0.02 - prevCharDelay;
     prevCharDelay = authDisplayDelay;
   }
+  authDisplayDelay += 0.02;
 
   const getQuote = useCallback(() => {
     setQuote("");
